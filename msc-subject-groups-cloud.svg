@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="516" viewBox="0 0 960 516" role="img" aria-labelledby="cloud-title cloud-desc">
+  <title id="cloud-title">MSC 2020 subject groups</title>
+  <desc id="cloud-desc">Weighted frequencies for 20 MSC subject groups, with primary codes counting twice. The largest are 34M at 33 and 34E at 9, followed by 14H at 5, then 34A and 40G at 4.</desc>
+  <defs>
+    <linearGradient id="card-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#192B61"/>
+      <stop offset="55%" stop-color="#152858"/>
+      <stop offset="100%" stop-color="#11214D"/>
+    </linearGradient>
+  </defs>
+  <rect x=".75" y=".75" width="958.5" height="514.5" fill="url(#card-blue)" stroke="#8496B9" stroke-width="1.5"/>
+  <path d="M44 83H916" stroke="#526DA2" stroke-width="1" opacity=".9"/>
+  <text x="46" y="55" fill="#C8D8F2" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" letter-spacing="3">RESEARCH AREAS</text>
+  <text x="915" y="55" fill="#B5C7E9" font-family="Arial,Helvetica,sans-serif" text-anchor="end" font-size="12" letter-spacing="1.4">MSC subject groups</text>
+  <g font-family="Arial,Helvetica,sans-serif" font-weight="650" text-anchor="middle">
+    <text x="287" y="169" fill="#F8FAFF" font-size="96" font-weight="750"><title>34M: ODEs in the complex domain — weighted 33</title>34M</text>
+    <text x="737" y="169" fill="#E5ECFA" font-size="68" font-weight="750"><title>34E: Asymptotic theory of ODEs — weighted 9</title>34E</text>
+    <text x="182" y="254" fill="#C9DBF8" font-size="46">40G</text>
+    <text x="471" y="254" fill="#D7E2F5" font-size="49">34A</text>
+    <text x="769" y="254" fill="#B5C8EF" font-size="42">30F</text>
+    <text x="139" y="328" fill="#B8CBEA" font-size="39">14D</text>
+    <text x="365" y="328" fill="#C9DBF8" font-size="50">14H</text>
+    <text x="584" y="328" fill="#A6BDE9" font-size="39">32G</text>
+    <text x="802" y="328" fill="#B8CBEA" font-size="35">32S</text>
+    <text x="143" y="402" fill="#A6BDE9" font-size="31">01A</text>
+    <text x="341" y="402" fill="#B8CBEA" font-size="31">53C</text>
+    <text x="545" y="402" fill="#91A9D6" font-size="31">58C</text>
+    <text x="770" y="402" fill="#A6BDE9" font-size="29">14M</text>
+    <text x="84" y="469" fill="#91A9D6" font-size="25">32A</text>
+    <text x="216" y="469" fill="#A6BDE9" font-size="25">32C</text>
+    <text x="348" y="469" fill="#B5C8EF" font-size="25">32L</text>
+    <text x="480" y="469" fill="#A6BDE9" font-size="25">32M</text>
+    <text x="612" y="469" fill="#A6BDE9" font-size="25">35C</text>
+    <text x="744" y="469" fill="#91A9D6" font-size="25">35Q</text>
+    <text x="876" y="469" fill="#B5C8EF" font-size="25">57K</text>
+  </g>
+</svg>

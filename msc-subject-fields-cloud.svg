@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="516" viewBox="0 0 960 516" role="img" aria-labelledby="cloud-title cloud-desc">
+  <title id="cloud-title">MSC 2020 subject fields</title>
+  <desc id="cloud-desc">The font sizes reflect occurrence-weighted MSC totals: ordinary differential equations 46; several complex variables and algebraic geometry 9 each; sequences and summability 4; functions of a complex variable 3; partial differential equations, history, differential geometry, and global analysis 2 each; topology 1.</desc>
+  <defs>
+    <linearGradient id="card-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#192B61"/>
+      <stop offset="55%" stop-color="#152858"/>
+      <stop offset="100%" stop-color="#11214D"/>
+    </linearGradient>
+  </defs>
+  <rect x=".75" y=".75" width="958.5" height="514.5" fill="url(#card-blue)" stroke="#8496B9" stroke-width="1.5"/>
+  <path d="M44 83H916" stroke="#526DA2" stroke-width="1" opacity=".9"/>
+  <text x="46" y="55" fill="#C8D8F2" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" letter-spacing="3">RESEARCH AREAS</text>
+  <text x="915" y="55" fill="#B5C7E9" font-family="Arial,Helvetica,sans-serif" text-anchor="end" font-size="12" letter-spacing="1.4">MSC subject fields</text>
+  <g font-family="Arial,Helvetica,sans-serif" font-weight="650" text-anchor="middle">
+    <text x="480" y="181" fill="#F8FAFF" font-size="53" font-weight="750">Ordinary differential equations</text>
+    <text x="258" y="267" fill="#D7E2F5" font-size="37">Several complex variables</text>
+    <text x="744" y="267" fill="#E5ECFA" font-size="42">Algebraic geometry</text>
+    <text x="480" y="346" fill="#C9DBF8" font-size="36">Sequences, series &amp; summability</text>
+    <text x="278" y="410" fill="#B8CBEA" font-size="24">Functions of a complex variable</text>
+    <text x="732" y="410" fill="#B5C8EF" font-size="23">Partial differential equations</text>
+    <text x="149" y="476" fill="#91A9D6" font-size="20">Differential geometry</text>
+    <text x="423" y="476" fill="#A6BDE9" font-size="21">Global analysis</text>
+    <text x="650" y="476" fill="#A6BDE9" font-size="18">History and biography</text>
+    <text x="851" y="476" fill="#91A9D6" font-size="17">Topology</text>
+  </g>
+</svg>

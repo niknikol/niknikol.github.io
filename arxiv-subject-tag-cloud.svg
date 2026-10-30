@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="516" viewBox="0 0 960 516" role="img" aria-labelledby="cloud-title cloud-desc">
+  <title id="cloud-title">Nikita Nikolaev — arXiv subject cloud matching the website research cards</title>
+  <desc id="cloud-desc">Primary classifications carry weight 3 and secondary classifications weight 1. Scores: math-ph 11; math.CA 13; math.AG 11; math.DG 7; math.CV 6; math.GT 4; math.AP 4; nlin.SI 2.</desc>
+  <defs>
+    <linearGradient id="website-card-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#192B61" />
+      <stop offset="55%" stop-color="#152858" />
+      <stop offset="100%" stop-color="#11214D" />
+    </linearGradient>
+  </defs>
+  <rect x="0.75" y="0.75" width="958.5" height="514.5" fill="url(#website-card-blue)" stroke="#8496B9" stroke-width="1.5" />
+  <path d="M44 83H916" stroke="#526DA2" stroke-width="1" opacity=".9" />
+  <text x="46" y="55" fill="#C8D8F2" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" letter-spacing="3">RESEARCH AREAS</text>
+  <text x="915" y="55" fill="#B5C7E9" font-family="Arial,Helvetica,sans-serif" text-anchor="end" font-size="12" letter-spacing="1.4">arXiv subjects</text>
+  <g font-family="Arial,Helvetica,sans-serif" font-weight="650" text-anchor="middle">
+    <text x="190" y="172" fill="#B5C8EF" font-size="55"><title>Complex Variables (math.CV): 6 points</title>math.CV</text>
+    <text x="512" y="172" fill="#D7E2F5" font-size="59"><title>Differential Geometry (math.DG): 7 points</title>math.DG</text>
+    <text x="808" y="160" fill="#91A9D6" font-size="29"><title>Exactly Solvable and Integrable Systems (nlin.SI): 2 points</title>nlin.SI</text>
+    <text x="269" y="282" fill="#E5ECFA" font-size="77" font-weight="750"><title>Algebraic Geometry (math.AG): 11 points</title>math.AG</text>
+    <text x="695" y="282" fill="#F8FAFF" font-size="85" font-weight="750"><title>Classical Analysis and ODEs (math.CA): 13 points</title>math.CA</text>
+    <text x="500" y="390" fill="#C9DBF8" font-size="78" font-weight="750"><title>Mathematical Physics (math-ph): 11 points</title>math-ph</text>
+    <text x="195" y="470" fill="#A6BDE9" font-size="44"><title>Geometric Topology (math.GT): 4 points</title>math.GT</text>
+    <text x="791" y="470" fill="#B8CBEA" font-size="44"><title>Analysis of PDEs (math.AP): 4 points</title>math.AP</text>
+  </g>
+</svg>
