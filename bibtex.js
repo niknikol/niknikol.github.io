@@ -36,10 +36,10 @@ const bibliography = {
     year: '2022', eprint: '2201.04526', primaryClass: 'math.CA'
   },
   'pub-1909-04011': {
-    kind: 'misc', key: 'Nikolaev2019Triangularisation',
+    kind: 'misc', key: 'Nikolaev2019InvariantFlags',
     author: 'Nikolaev, Nikita',
-    title: 'Triangularisation of Singularly Perturbed Logarithmic Differential Systems of Rank 2',
-    year: '2019', eprint: '1909.04011', primaryClass: 'math.CA'
+    title: 'Invariant Flags for Singularly Perturbed Logarithmic Systems of Rank Two',
+    year: '2019', note: 'Substantially revised 2026', eprint: '1909.04011', primaryClass: 'math.CA'
   },
   'pub-2112-08792': {
     kind: 'article', key: 'Nikolaev2024GevreyImplicitFunction',
