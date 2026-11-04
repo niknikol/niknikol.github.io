@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="960" height="765" viewBox="0 0 960 765" role="img" aria-labelledby="cloud-title cloud-desc">
   <title id="cloud-title">MSC 2020 subject codes</title>
-  <desc id="cloud-desc">The 39 MSC codes appearing in the works, sized by the weighted number of assignments, where a primary code counts twice. 34M60 has weight 12, 34M40 weight 7, 34E20 weight 5, and 40G10 weight 4.</desc>
+  <desc id="cloud-desc">The 38 MSC codes appearing in the works, sized by the weighted number of assignments, where a primary code counts twice. 34M60 has weight 12, 34M40 weight 7, 34E20 weight 4, and 40G10 weight 4.</desc>
   <defs>
     <linearGradient id="card-blue" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#192B61"/>
@@ -15,10 +15,10 @@
   <g font-family="Arial,Helvetica,sans-serif" font-weight="650" text-anchor="middle">
     <text x="254" y="167" fill="#F8FAFF" font-size="91" font-weight="750">34M60</text>
     <text x="714" y="167" fill="#E5ECFA" font-size="77" font-weight="750">34M40</text>
-    <text x="190" y="247" fill="#D7E2F5" font-size="59">34E20</text>
+    <text x="190" y="247" fill="#D7E2F5" font-size="53">34E20</text>
     <text x="500" y="247" fill="#C9DBF8" font-size="53">40G10</text>
     <text x="786" y="247" fill="#B8CBEA" font-size="45">34E10</text>
-    <text x="176" y="326" fill="#C9DBF8" font-size="45">34M30</text>
+    <text x="176" y="326" fill="#C9DBF8" font-size="40">34M30</text>
     <text x="485" y="326" fill="#B5C8EF" font-size="40">34M03</text>
     <text x="758" y="326" fill="#A6BDE9" font-size="40">34M04</text>
     <text x="125" y="402" fill="#B5C8EF" font-size="38">34M25</text>
@@ -36,13 +36,12 @@
     <text x="568" y="544" fill="#B5C8EF" font-size="28">14M35</text>
     <text x="727" y="544" fill="#91A9D6" font-size="28">30F20</text>
     <text x="867" y="544" fill="#A6BDE9" font-size="27">32A05</text>
-    <text x="93" y="607" fill="#91A9D6" font-size="25">32G15</text>
-    <text x="220" y="607" fill="#A6BDE9" font-size="25">32G34</text>
-    <text x="344" y="607" fill="#B5C8EF" font-size="25">32M25</text>
-    <text x="469" y="607" fill="#91A9D6" font-size="25">32S40</text>
-    <text x="594" y="607" fill="#A6BDE9" font-size="25">32S65</text>
-    <text x="716" y="607" fill="#91A9D6" font-size="25">34A12</text>
-    <text x="840" y="607" fill="#B5C8EF" font-size="25">34A34</text>
+    <text x="105" y="607" fill="#91A9D6" font-size="25">32G15</text>
+    <text x="255" y="607" fill="#A6BDE9" font-size="25">32G34</text>
+    <text x="405" y="607" fill="#B5C8EF" font-size="25">32M25</text>
+    <text x="555" y="607" fill="#91A9D6" font-size="25">32S40</text>
+    <text x="705" y="607" fill="#A6BDE9" font-size="25">32S65</text>
+    <text x="855" y="607" fill="#B5C8EF" font-size="25">34A34</text>
     <text x="144" y="666" fill="#91A9D6" font-size="25">34E15</text>
     <text x="317" y="666" fill="#A6BDE9" font-size="25">34M56</text>
     <text x="494" y="666" fill="#B5C8EF" font-size="25">35C10</text>

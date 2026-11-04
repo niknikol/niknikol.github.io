@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="960" height="516" viewBox="0 0 960 516" role="img" aria-labelledby="cloud-title cloud-desc">
   <title id="cloud-title">MSC 2020 subject groups</title>
-  <desc id="cloud-desc">Weighted frequencies for 20 MSC subject groups, with primary codes counting twice. The largest are 34M at 33 and 34E at 9, followed by 14H at 5, then 34A and 40G at 4.</desc>
+  <desc id="cloud-desc">Weighted frequencies for 20 MSC subject groups, with primary codes counting twice. The largest are 34M at 32 and 34E at 8, followed by 14H at 5 and 40G at 4.</desc>
   <defs>
     <linearGradient id="card-blue" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#192B61"/>
@@ -13,10 +13,10 @@
   <text x="46" y="55" fill="#C8D8F2" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" letter-spacing="3">RESEARCH AREAS</text>
   <text x="915" y="55" fill="#B5C7E9" font-family="Arial,Helvetica,sans-serif" text-anchor="end" font-size="12" letter-spacing="1.4">MSC subject groups</text>
   <g font-family="Arial,Helvetica,sans-serif" font-weight="650" text-anchor="middle">
-    <text x="287" y="169" fill="#F8FAFF" font-size="96" font-weight="750"><title>34M: ODEs in the complex domain — weighted 33</title>34M</text>
-    <text x="737" y="169" fill="#E5ECFA" font-size="68" font-weight="750"><title>34E: Asymptotic theory of ODEs — weighted 9</title>34E</text>
+    <text x="287" y="169" fill="#F8FAFF" font-size="95" font-weight="750"><title>34M: ODEs in the complex domain — weighted 32</title>34M</text>
+    <text x="737" y="169" fill="#E5ECFA" font-size="65" font-weight="750"><title>34E: Asymptotic theory of ODEs — weighted 8</title>34E</text>
     <text x="182" y="254" fill="#C9DBF8" font-size="46">40G</text>
-    <text x="471" y="254" fill="#D7E2F5" font-size="49">34A</text>
+    <text x="471" y="254" fill="#D7E2F5" font-size="42">34A</text>
     <text x="769" y="254" fill="#B5C8EF" font-size="42">30F</text>
     <text x="139" y="328" fill="#B8CBEA" font-size="39">14D</text>
     <text x="365" y="328" fill="#C9DBF8" font-size="50">14H</text>

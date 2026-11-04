@@ -31,9 +31,9 @@ const bibliography = {
     year: '2024', eprint: '2410.17224', primaryClass: 'math.DG'
   },
   'pub-2201-04526': {
-    kind: 'misc', key: 'Nikolaev2022ExactPerturbative',
-    author: 'Nikolaev, Nikita', title: 'An Exact Perturbative Existence and Uniqueness Theorem',
-    year: '2022', eprint: '2201.04526', primaryClass: 'math.CA'
+    kind: 'misc', key: 'Nikolaev2022BorelSummability',
+    author: 'Nikolaev, Nikita', title: 'Borel Summability for Nonlinear Differential Systems on Characteristic Domains',
+    year: '2022', note: 'Substantially revised 2026', eprint: '2201.04526', primaryClass: 'math.CA'
   },
   'pub-1909-04011': {
     kind: 'misc', key: 'Nikolaev2019InvariantFlags',
