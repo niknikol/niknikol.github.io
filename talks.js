@@ -37,6 +37,14 @@
 
   const talks = [
     {
+      date: '2026-12-07', when: '7 December 2026', time: '15:00–16:00',
+      title: 'Geometric Convolution Product',
+      event: 'Manchester Geometry Seminar',
+      location: 'University of Manchester, United Kingdom',
+      abstractKey: '2026-12-07-manchester',
+      links: [['Event link', 'https://events.manchester.ac.uk/event/event:dju-mwmgcixo-8vwp9j/nikita-nikolaev-geometric-convolution-product']]
+    },
+    {
       date: '2024-04', when: 'Apr 2024',
       event: 'Quantum Curves Day',
       location: 'University of Edinburgh, United Kingdom'
@@ -293,6 +301,11 @@
 
   // Abstracts supplied by the author. String.raw preserves the original LaTeX notation.
   const suppliedAbstracts = {
+    '2026-12-07-manchester': String.raw`The convolution product f ∗ g of two holomorphic functions defined near the origin is again a holomorphic function near the origin. Understanding the analytic continuation of f ∗ g is a fundamental problem in the theory of resurgence, where having global control over convolution products of functions is essential in order to answer virtually any question. Yet it is a surprisingly difficult problem: the singularities of f and g interact in complicated ways so the singularities of f ∗ g quickly grow out of control.
+
+In this talk, I will present a new, fully geometric approach to this problem by constructing a geometric convolution product for Riemann surfaces and holomorphic functions on them. A pair of Riemann surfaces X₁, X₂ over the complex plane determines a natural three-dimensional holomorphic Lie groupoid, called their convolution groupoid, which contains a distinguished Riemann surface X₁ ∗ X₂, called their convolution curve. A pair of holomorphic functions f, g on X₁, X₂ then determines a holomorphic groupoid cocycle Z on the convolution groupoid, called the convolution central charge. The ordinary convolution product f ∗ g is then recovered locally by restriction of Z to the convolution curve.
+
+Remarkably, whilst the convolution curve depends on the choice of distinguished points on X₁, X₂, the convolution groupoid and central charge are completely canonical. The convolution central charge therefore gives rise to many determinations of the convolution product f ∗ g related to one another by period integrals. Furthermore, the convolution product of Riemann surfaces is functorial and satisfies a powerful universal property: the convolution curve X₁ ∗ X₂ is the smallest Riemann surface which supports the maximal simultaneous analytic continuation of the germs of all convolution products f ∗ g, as f and g range over all holomorphic functions on X₁ and X₂. Finally, the convolution of endless Riemann surfaces is again endless. Together, these results allow us to resolve several longstanding problems in resurgence.`,
     '2024-07-01': String.raw`Divergent series expansions naturally arise in many parts of mathematics and physics including dynamical systems, gauge theory, quantisation of Poisson structures, mirror symmetry and stability in algebraic geometry, quantum field theory and string theory, and the list goes on. This mini-course is an introduction to an amazing emerging subject of Exact Perturbation Theory, also known as Resurgence. This theory provides powerful methods to upgrade a priori meaningless divergent expansions to meaningful analytic information. One such method is called Borel resummation: it involves a detailed analysis (via the Borel-Laplace transform) of a given divergent expansion in order to recover exponentially small terms (a.k.a. nonperturbative corrections) that otherwise cannot be captured in ordinary perturbation theory. The astounding big-picture upshot of this theory is that — contrary to Freeman Dyson’s conclusion that perturbation theory is incomplete — the divergent sector of perturbation theory actually already ’knows’ all the necessary nonperturbative information, and it is therefore only a matter of applying suitable methods to extract it.
 
 My aim is to give a systematic treatment of the subject to build a solid foundation. Most of this course therefore will focus on the basic theory of divergent series and Borel resummation. At heart, the subject is just an extension of the ordinary complex analysis, and I will repeatedly stress this sentiment because I think it helps to demystify the subject. We will see, however, that this extension is exceptionally rich and full of remarkable new phenomena. Another feature that I find extraordinary and that I will emphasise throughout the course, is that, although at first sight this subject may appear to be confined to analysis, in fact it has as much an algebraic and geometric flavour as an analytic one.
@@ -353,7 +366,15 @@ In this talk, I will first explain how the WKB method proceeds traditionally, em
   })[character]);
 
   let panelCounter = 0;
-  function addOverview(article, overview, sourced = false) {
+  function setExpanded(button, expanded) {
+    const panel = document.getElementById(button.getAttribute('aria-controls'));
+    if (!panel) return;
+    button.setAttribute('aria-expanded', String(expanded));
+    button.querySelector('.d-pub-toggle-icon').textContent = expanded ? '−' : '+';
+    panel.hidden = !expanded;
+  }
+
+  function addOverview(article, overview, sourced = false, keepLinksVisible = false) {
     const heading = article.querySelector('.d-talk-body h3');
     if (!heading || heading.querySelector('button')) return;
     const id = `talk-overview-${++panelCounter}`;
@@ -369,6 +390,7 @@ In this talk, I will first explain how the WKB method proceeds traditionally, em
     icon.setAttribute('aria-hidden', 'true');
     icon.textContent = '+';
     toggle.append(icon);
+    toggle.addEventListener('click', () => setExpanded(toggle, toggle.getAttribute('aria-expanded') !== 'true'));
     heading.replaceChildren(toggle);
 
     const panel = document.createElement('div');
@@ -390,7 +412,7 @@ In this talk, I will first explain how the WKB method proceeds traditionally, em
     }
     if (description) description.remove();
     const links = article.querySelector('.d-talk-links');
-    if (links) {
+    if (links && !keepLinksVisible) {
       const label = document.createElement('span');
       label.className = 'd-panel-label d-talk-resource-label';
       label.textContent = 'RESOURCES';
@@ -399,15 +421,18 @@ In this talk, I will first explain how the WKB method proceeds traditionally, em
     article.querySelector('.d-talk-body').append(panel);
   }
 
-  function makeEntry(item, sectionId) {
+  function makeEntry(item, titleFirst = false) {
     const entry = document.createElement('article');
     entry.className = 'd-talk-entry';
     entry.dataset.sort = item.date;
-    const heading = item.event || item.title || 'Research talk';
+    const heading = (titleFirst && item.title) || item.event || item.title || 'Research talk';
     const description = item.location || '';
-    const talkTitle = item.title && item.event !== item.title ? item.title : null;
-    entry.innerHTML = `<div class="d-talk-date"><time datetime="${escapeHTML(item.date)}">${escapeHTML(item.when)}</time>${item.count ? `<span>${escapeHTML(item.count)}</span>` : ''}</div>
-      <div class="d-talk-body"><h3>${escapeHTML(heading)}</h3><p class="d-talk-meta">${escapeHTML(description)}</p>
+    const talkTitle = !titleFirst && item.title !== heading ? item.title : null;
+    const dateNote = item.time || item.count;
+    entry.innerHTML = `<div class="d-talk-date"><time datetime="${escapeHTML(item.date)}">${escapeHTML(item.when)}</time>${dateNote ? `<span>${escapeHTML(dateNote)}</span>` : ''}</div>
+      <div class="d-talk-body"><h3>${escapeHTML(heading)}</h3>
+      ${titleFirst && item.event && item.event !== heading ? `<p class="d-talk-meta">${escapeHTML(item.event)}</p>` : ''}
+      <p class="d-talk-meta">${escapeHTML(description)}</p>
       ${talkTitle ? `<p class="d-talk-talk-title">${escapeHTML(talkTitle)}</p>` : ''}
       ${item.links?.length ? `<div class="d-talk-links">${item.links.map(([label, url]) => `<a href="${escapeHTML(url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(label)} <span aria-hidden="true">↗</span></a>`).join('')}</div>` : ''}</div>`;
     if (!item.title) entry.classList.add('d-talk-venue-only');
@@ -445,11 +470,31 @@ In this talk, I will first explain how the WKB method proceeds traditionally, em
   ]) {
     const list = document.getElementById(id);
     if (!list) continue;
-    items.forEach((item) => list.append(makeEntry(item, id)));
+    items.forEach((item) => list.append(makeEntry(item)));
     list.querySelectorAll('.d-talk-entry').forEach((entry) => {
       entry.dataset.sort ||= entry.querySelector('time')?.getAttribute('datetime') || '0000';
     });
     [...list.children].sort((left, right) => right.dataset.sort.localeCompare(left.dataset.sort)).forEach((entry) => list.append(entry));
+  }
+
+  const upcomingList = document.getElementById('upcoming-talk-list');
+  if (upcomingList) {
+    const parts = new Intl.DateTimeFormat('en-GB', {
+      timeZone: 'Europe/London', year: 'numeric', month: '2-digit', day: '2-digit'
+    }).formatToParts(new Date());
+    const dateParts = Object.fromEntries(parts.map(({type, value}) => [type, value]));
+    const today = `${dateParts.year}-${dateParts.month}-${dateParts.day}`;
+    const upcoming = talks
+      .filter(({date}) => /^\d{4}-\d{2}-\d{2}$/.test(date) && date >= today)
+      .sort((left, right) => left.date.localeCompare(right.date) || (left.time || '').localeCompare(right.time || ''));
+    upcoming.forEach((item) => upcomingList.append(makeEntry(item, true)));
+    if (upcoming.length) {
+      const section = upcomingList.closest('section');
+      section.hidden = false;
+      section.parentElement.querySelectorAll(':scope > section:not([hidden]) > h2 > .d-title-index').forEach((index, position) => {
+        index.textContent = `${String(position + 1).padStart(2, '0')} |`;
+      });
+    }
   }
 
   // Each MAPSS mini-course has its own card; the shared school details appear once above them.
@@ -486,6 +531,7 @@ In this talk, I will first explain how the WKB method proceeds traditionally, em
 
   verifiedOverviews.forEach(({list, title, overview, starts}) => {
     const target = list === 'lecture-course-list' ? document.getElementById('lecture-courses') : document.getElementById(list);
+    if (!target) return;
     const article = [...target.querySelectorAll('.d-talk-entry')]
       .find((entry) => entry.querySelector('.d-talk-talk-title')?.textContent.trim() === title && (!starts || entry.dataset.sort.startsWith(starts)));
     if (article) article.dataset.overview = overview;
@@ -496,7 +542,10 @@ In this talk, I will first explain how the WKB method proceeds traditionally, em
     const key = entry.dataset.abstractKey || date;
     const abstract = suppliedAbstracts[key] || sourceAbstracts[key];
     const overview = abstract || entry.dataset.overview;
-    if (overview || entry.querySelector('.d-talk-links, .d-talk-description')) addOverview(entry, overview, Boolean(abstract));
+    const isUpcoming = upcomingList?.contains(entry);
+    if (overview || (!isUpcoming && entry.querySelector('.d-talk-links, .d-talk-description'))) {
+      addOverview(entry, overview, Boolean(abstract), isUpcoming);
+    }
   });
 
   document.querySelectorAll('.d-mini-group').forEach((group) => {
@@ -525,13 +574,6 @@ In this talk, I will first explain how the WKB method proceeds traditionally, em
     expandAll.innerHTML = 'Expand all <span aria-hidden="true">+</span>';
     heading.append(expandAll);
 
-    const setExpanded = (button, expanded) => {
-      const panel = document.getElementById(button.getAttribute('aria-controls'));
-      if (!panel) return;
-      button.setAttribute('aria-expanded', String(expanded));
-      button.querySelector('.d-pub-toggle-icon').textContent = expanded ? '−' : '+';
-      panel.hidden = !expanded;
-    };
     const update = () => {
       const allExpanded = buttons.every((button) => button.getAttribute('aria-expanded') === 'true');
       const action = allExpanded ? 'Collapse all' : 'Expand all';
@@ -540,10 +582,7 @@ In this talk, I will first explain how the WKB method proceeds traditionally, em
       expandAll.firstChild.textContent = `${action} `;
       expandAll.querySelector('span').textContent = allExpanded ? '−' : '+';
     };
-    buttons.forEach((button) => button.addEventListener('click', () => {
-      setExpanded(button, button.getAttribute('aria-expanded') !== 'true');
-      update();
-    }));
+    buttons.forEach((button) => button.addEventListener('click', update));
     expandAll.addEventListener('click', () => {
       const openAll = buttons.some((button) => button.getAttribute('aria-expanded') !== 'true');
       buttons.forEach((button) => setExpanded(button, openAll));

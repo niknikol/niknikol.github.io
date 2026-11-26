@@ -375,6 +375,9 @@ button { font: inherit; }
 .d-talk-body h3 { font: 500 clamp(20px,2.4vw,26px)/1.24 'Fraunces', Georgia, serif; letter-spacing: -.03em; color: #132c60; margin: 0 0 9px; }
 .d-talk-entry .d-pub-toggle-icon { top: 28px; right: 30px; }
 .d-talk-meta { margin: 0; color: #516783; font: 600 12px/1.55 'DM Sans', sans-serif; }
+#upcoming-talk-list .d-talk-meta { font-size: 14px; }
+#upcoming-talk-list .d-talk-date span { color: #516783; font-size: 11px; }
+#upcoming-talk-list .d-talk-links a { font-size: 12px; }
 .d-talk-talk-title { margin: 9px 0 0; color: #294779; font: 500 17px/1.45 'Fraunces', Georgia, serif; letter-spacing: -.01em; }
 #research-talk-list .d-talk-body h3, #lecture-course-list .d-talk-body h3, #research-course-list .d-talk-body h3 { font-size: clamp(19px,2vw,22px); }
 #research-talk-list .d-talk-meta, #lecture-course-list .d-talk-meta, #research-course-list .d-talk-meta { font-size: 14px; }
@@ -471,6 +474,7 @@ button { font: inherit; }
   .d-talks-section + .d-talks-section { margin-top: 58px; }
   .d-talks-heading-note { display: none; }
   .d-talk-entry { grid-template-columns: 1fr; gap: 12px; padding: 22px 21px 24px; }
+  #upcoming-talk-list .d-talk-entry { grid-template-columns: minmax(0, 1fr); }
   .d-talk-body { padding-right: 23px; }
   .d-talk-date { display: flex; flex-wrap: wrap; gap: 11px; align-items: baseline; padding-top: 0; }
   .d-talk-date span { margin: 0; }
